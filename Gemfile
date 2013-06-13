@@ -32,6 +32,9 @@ end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# State machine
+gem 'state_machine'
+
 ## Authentication (OmniAuth)
 gem 'omniauth', github: 'intridea/omniauth'
 #gem 'omniauth-twitter'
@@ -62,6 +65,9 @@ group :test, :developent do
   gem 'cucumber-rails', require: false
   gem 'capybara'
   gem 'email_spec'
+  gem "mocha", require: false
+  gem 'response_code_matchers'
+  gem 'rspec-rails-mocha', require: false
 end
 
 # Use ActiveModel has_secure_password
