@@ -57,7 +57,11 @@ group :test, :developent do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-cucumber'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', require: false
+  gem 'capybara'
+  gem 'email_spec'
 end
 
 # Use ActiveModel has_secure_password
