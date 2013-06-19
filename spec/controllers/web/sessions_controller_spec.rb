@@ -16,4 +16,21 @@ describe Web::SessionsController do
     end
   end
 
+  describe "Authenticatoin with various providers" do
+    describe "with Github" do
+      before do
+        request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:github]
+      end
+
+      it "should authorize account" do
+        post :create, provider: "github", uid: "1234567"
+        expect(response).to be_redirect
+      end
+
+      it "should create new account" do
+        post :create, provider: "github", uid: "1234567", info: {name: "name"}, credentials:{token: "token"}
+        expect(response).to be_redirect
+      end
+    end
+  end
 end

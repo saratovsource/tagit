@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # Extend controller
-  include Authentication
+  include Concerns::Authentication
+  include Concerns::I18n
 end

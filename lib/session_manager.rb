@@ -18,6 +18,6 @@ class SessionManager
   end
 
   def provider
-    # TODO: Add fetching provider from database
+    providers_repository.find(storage[:authentication_provider_id])
   end
 end

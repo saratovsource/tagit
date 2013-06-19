@@ -24,10 +24,11 @@ ActiveRecord::Schema.define(version: 20130613215730) do
 
   create_table "authentication_provider_bases", force: true do |t|
     t.integer  "account_id"
-    t.string   "slug"
+    t.string   "provider"
     t.string   "state"
     t.text     "info"
     t.text     "extra"
+    t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

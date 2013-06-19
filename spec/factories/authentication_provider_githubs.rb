@@ -4,6 +4,6 @@ FactoryGirl.define do
   factory :authentication_provider_github,
     class: 'AuthenticationProvider::Github',
     parent: :authentication_provider_basis do
-      slug "github"
+      provider "github"
   end
 end

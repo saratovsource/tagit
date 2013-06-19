@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :authentication_provider_basis, :class => 'AuthenticationProvider::Base' do
     account
-    slug "base"
+    provider "base"
   end
 end

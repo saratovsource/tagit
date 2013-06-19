@@ -5,6 +5,7 @@ gem 'rails', '4.0.0.rc2'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'figaro', github: 'laserlemon/figaro'#, branch: 'rails4'
 
 group :assets do
   # Use SCSS for stylesheets

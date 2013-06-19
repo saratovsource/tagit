@@ -15,6 +15,14 @@ GIT
       rack
 
 GIT
+  remote: git://github.com/laserlemon/figaro.git
+  revision: a4aac4b88427bc4843f74ff23eba35b9aa206671
+  specs:
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
+
+GIT
   remote: git://github.com/peter-murach/github.git
   revision: 142218b4087e7d88273c5c5f30fd41e47517f2c5
   specs:
@@ -286,6 +294,7 @@ DEPENDENCIES
   cucumber-rails
   email_spec
   factory_girl_rails
+  figaro!
   github_api!
   guard
   guard-cucumber
