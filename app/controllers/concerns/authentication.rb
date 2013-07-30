@@ -1,6 +1,13 @@
 module Concerns
   module Authentication
     extend ActiveSupport::Concern
+    included do
+      helper_method :account, :signined?
+    end
+
+    def account
+      session_manager.account
+    end
 
     def singin(provider)
       session_manager << provider

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= link_to "Logout #{account.id}", session_path, method: :delete if signined?%>
+
 <%= yield %>
 
 </body>

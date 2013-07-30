@@ -4,6 +4,10 @@ class SessionManager
     @storage = storage
   end
 
+  def account
+    has_provider? ? provider.account : guest
+  end
+
   def set_provider(provider)
     @storage[:authentication_provider_id] = provider.id
   end
@@ -19,5 +23,15 @@ class SessionManager
 
   def provider
     providers_repository.find(storage[:authentication_provider_id])
+  end
+
+  def guest
+    Account::Guest.new
+  end
+
+  protected
+
+  def providers_repository
+    @providers_repository ||= ProvidersRepository.new
   end
 end

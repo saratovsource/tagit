@@ -1,6 +1,10 @@
 module Concerns
   class MissingLocale < RuntimeError; end;
   module I18n
+    extend ActiveSupport::Concern
+    included do
+      before_action :set_locale
+    end
 
     def set_locale
       if params[:locale]

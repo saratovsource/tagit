@@ -1,0 +1,7 @@
+%h1 Create session
+%p Choose auth provider
+%p= OmniAuth.strategies
+
+%ul
+  - @providers.each do |provider|
+    %li= link_to auth_with_provider_url(provider), auth_with_provider_url(provider)

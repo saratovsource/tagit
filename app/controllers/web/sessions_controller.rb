@@ -1,4 +1,5 @@
 class Web::SessionsController < Web::ApplicationController
+  include Concerns::SocialUrls
 
   def new
     @providers = [:github]
@@ -7,12 +8,20 @@ class Web::SessionsController < Web::ApplicationController
 
   def create
     @provider = repository.with_credentials(auth_hash)
-    #@provider.assign_attributes(auth_hash)
-    if @provider.save
+    if @provider.present?
+      #@provider.update_info(auth_hash)
+      singin(@provider)
+      redirect_to root_path
+    elsif signined?
+      @provider = Factories::ProviderFactory.new(auth_hash).build
+      account.add_provider(@provider)
       singin(@provider)
       redirect_to root_path
     else
-      redirect_to new_session_path
+      @provider = Factories::ProviderFactory.new(auth_hash).build
+      account = Account.new
+      account.add_provider(@provider)
+      redirect_to root_path if account.save
     end
   end
 
