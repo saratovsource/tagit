@@ -9,7 +9,7 @@ class Web::SessionsController < Web::ApplicationController
   def create
     @provider = repository.with_credentials(auth_hash)
     if @provider.present?
-      #@provider.update_info(auth_hash)
+      @provider.update_info(auth_hash)
       singin(@provider)
       redirect_to root_path
     elsif signined?
@@ -21,7 +21,10 @@ class Web::SessionsController < Web::ApplicationController
       @provider = Factories::ProviderFactory.new(auth_hash).build
       account = Account.new
       account.add_provider(@provider)
-      redirect_to root_path if account.save
+      if account.save
+        singin(@provider)
+      end
+      redirect_to root_path 
     end
   end
 

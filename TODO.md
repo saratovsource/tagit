@@ -8,7 +8,7 @@ Legend:
 Just first steps:
 
 [*] Implement multiple authentication providers
-  [ ] Add provider info for every provider
+  [+] Add provider info for every provider
   [ ] Show account info from current provider
   [ ] Make a start for authorization via Github
 [ ] Github repository synchronize with the current account

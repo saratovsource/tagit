@@ -4,8 +4,6 @@ class CreateAuthenticationProviderBases < ActiveRecord::Migration
       t.references  :account, index: true
       t.string      :provider
       t.string      :state
-      t.text        :info
-      t.text        :extra
 
       t.string      :uid # Github
 
