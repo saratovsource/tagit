@@ -7,11 +7,12 @@ Legend:
 
 Just first steps:
 
-[*] Implement multiple authentication providers
+[~] Implement multiple authentication providers
   [+] Add provider info for every provider
   [+] Create simple bootstrap theme
   [+] Show account info from current provider
-  [ ] Make a start for authorization via Github
+  [+] Make a start for authorization via Github
+  [~] Add some authenticate providers
 [ ] Github repositories synchronize with the current account
 [ ] Make taggable repository object
 [ ] Add a few other authentication providers
