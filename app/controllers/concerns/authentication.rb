@@ -6,7 +6,7 @@ module Concerns
     end
 
     def account
-      session_manager.account
+      @account = session_manager.account
     end
 
     def singin(provider)

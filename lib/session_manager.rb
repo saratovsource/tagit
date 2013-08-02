@@ -5,7 +5,7 @@ class SessionManager
   end
 
   def account
-    has_provider? ? provider.account : guest
+    has_provider? ? provider.account.decorate(context: {provider: provider}) : guest
   end
 
   def set_provider(provider)

@@ -5,5 +5,6 @@ FactoryGirl.define do
     class: 'AuthenticationProvider::Github',
     parent: :authentication_provider_basis do
       provider "github"
+      account { |a| a.association(:account) }
   end
 end

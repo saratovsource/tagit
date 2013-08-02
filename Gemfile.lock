@@ -108,6 +108,10 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     diff-lcs (1.2.4)
+    draper (1.2.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     email_spec (1.5.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -134,6 +138,8 @@ GEM
     guard-cucumber (1.4.0)
       cucumber (>= 1.2.0)
       guard (>= 1.1.0)
+    guard-rails (0.4.7)
+      guard (>= 0.2.2)
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
@@ -235,6 +241,7 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
+    request_store (1.0.5)
     response_code_matchers (0.0.3)
       rack
     rspec (2.14.1)
@@ -307,12 +314,14 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
+  draper (~> 1.0)
   email_spec
   factory_girl_rails
   figaro!
   github_api!
   guard
   guard-cucumber
+  guard-rails
   guard-rspec
   haml-rails
   jbuilder (~> 1.2)

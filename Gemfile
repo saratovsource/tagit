@@ -52,6 +52,9 @@ gem 'github_api', github: 'peter-murach/github'
 # Angular
 gem 'angularjs-rails'
 
+# Draper (presenter)
+gem 'draper', '~> 1.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -62,6 +65,7 @@ group :test, :developent do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'guard'
+  gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'factory_girl_rails'
