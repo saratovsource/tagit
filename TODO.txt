@@ -9,9 +9,10 @@ Just first steps:
 
 [*] Implement multiple authentication providers
   [+] Add provider info for every provider
+  [*] Create simple bootstrap theme
   [ ] Show account info from current provider
   [ ] Make a start for authorization via Github
-[ ] Github repository synchronize with the current account
+[ ] Github repositories synchronize with the current account
 [ ] Make taggable repository object
 [ ] Add a few other authentication providers
 [ ] Add a link - as the main object to be tagged

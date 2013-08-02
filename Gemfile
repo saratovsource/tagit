@@ -26,6 +26,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'haml-rails'
+
+# Twitter bootstrap
+gem "therubyracer"
+gem "less-rails"
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

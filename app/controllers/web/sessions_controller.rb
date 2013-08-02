@@ -1,5 +1,4 @@
 class Web::SessionsController < Web::ApplicationController
-  include Concerns::SocialUrls
 
   def new
     @providers = [:github]
