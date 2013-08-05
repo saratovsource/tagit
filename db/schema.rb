@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130731202329) do
+ActiveRecord::Schema.define(version: 20130805194623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,5 +36,12 @@ ActiveRecord::Schema.define(version: 20130731202329) do
   end
 
   add_index "authentication_provider_bases", ["account_id"], name: "index_authentication_provider_bases_on_account_id", using: :btree
+
+  create_table "links", force: true do |t|
+    t.string   "uri"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
