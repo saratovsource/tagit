@@ -10,4 +10,9 @@ describe Link do
     link = build :invalid_link
     expect(link).to be_invalid
   end
+
+  it "should be taggble" do
+    link = build :valid_link
+    expect(link).to respond_to(:tags)
+  end
 end

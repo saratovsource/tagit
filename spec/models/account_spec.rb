@@ -5,4 +5,9 @@ describe Account do
     account = create :account
     expect(account).to be_valid
   end
+
+  it "should be tagger" do
+    account = build :account
+    expect(account).to respond_to(:tag)
+  end
 end
