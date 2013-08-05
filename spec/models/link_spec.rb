@@ -1,5 +1,13 @@
 require 'spec_helper'
 
 describe Link do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should have valid uri" do
+    link = build :valid_link
+    expect(link).to be_valid
+  end
+
+  it "should be invalid link item" do
+    link = build :invalid_link
+    expect(link).to be_invalid
+  end
 end
