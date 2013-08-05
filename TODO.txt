@@ -13,8 +13,8 @@ Just first steps:
   [+] Show account info from current provider
   [+] Make a start for authorization via Github
   [~] Add some authenticate providers
-[ ] Add a link - as the main object to be tagged
-[ ] Make taggable repository object
+[+] Add a link - as the main object to be tagged
+[*] Make taggable repository object
 [ ] Github repositories synchronize with the current account
 [ ] Add a few other authentication providers
 [ ] Add listings collected from the objects with a set of tags
