@@ -3,19 +3,19 @@ class Api::V1::User::LinksController < Api::ApplicationController
   # List of authenticated user links
   def index
     @collection = repository.all
-    respond_with @collection
+    respond_with @collection, each_serializer: ::User::LinkSerializer
   end
 
   def create
     @item = repository.build.becomes(::User::LinkType)
     @item.assign_attributes(params[:link])
     @item.save
-    respond_with @item, location: api_v1_user_link_path(@item)
+    respond_with @item, location: api_v1_user_link_path(@item), serializer: ::User::LinkSerializer
   end
 
   def show
     @item = repository.find(params[:id])
-    respond_with @item
+    respond_with @item, serializer: ::User::LinkSerializer
   end
 
   def update

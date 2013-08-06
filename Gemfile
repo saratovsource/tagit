@@ -39,6 +39,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'state_machine'
 
 gem 'virtus'
+gem 'active_model_serializers'
 
 ## Authentication (OmniAuth)
 gem 'omniauth', github: 'intridea/omniauth'

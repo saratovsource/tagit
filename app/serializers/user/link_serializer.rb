@@ -1,3 +1,3 @@
 class User::LinkSerializer < ApplicationSerializer
-  attributes :uri
+  attributes :id, :uri, :created_at, :updated_at
 end
