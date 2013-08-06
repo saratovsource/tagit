@@ -1,4 +1,5 @@
 class Api::V1::User::LinksController < Api::ApplicationController
+  authorize_actions_for Link
 
   # List of authenticated user links
   def index
@@ -34,6 +35,6 @@ class Api::V1::User::LinksController < Api::ApplicationController
   protected
 
   def repository
-    @repository ||= ::User::LinksRepository.new(account)
+    @repository ||= ::User::LinksRepository.new(current_user)
   end
 end

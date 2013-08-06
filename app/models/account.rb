@@ -1,4 +1,5 @@
 class Account < ActiveRecord::Base
+  include Authority::UserAbilities
   acts_as_tagger
   has_many :authentication_providers, class_name: "AuthenticationProvider::Base"
   has_many :links, inverse_of: :account
@@ -9,5 +10,9 @@ class Account < ActiveRecord::Base
 
   def add_provider(provider)
     self.authentication_providers << provider
+  end
+
+  def guest?
+    false
   end
 end

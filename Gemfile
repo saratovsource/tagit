@@ -49,6 +49,9 @@ gem 'omniauth-github', github: 'intridea/omniauth-github'
 #gem 'omniauth-linkedin'
 #gem 'omniauth-google-oauth2'
 
+# Authorization
+gem 'authority'
+
 # Tags
 gem 'acts-as-taggable-on'
 

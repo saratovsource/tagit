@@ -4,8 +4,12 @@ class SessionManager
     @storage = storage
   end
 
+  def profile
+    has_provider? ? account.decorate(context: {provider: provider}) : guest
+  end
+
   def account
-    has_provider? ? provider.account.decorate(context: {provider: provider}) : guest
+    has_provider? ? provider.account : guest
   end
 
   def set_provider(provider)

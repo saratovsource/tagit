@@ -79,6 +79,9 @@ GEM
     angularjs-rails (1.0.7)
     arel (4.0.0)
     atomic (1.1.10)
+    authority (2.7.0)
+      activesupport (>= 3.0.0)
+      rake (>= 0.8.7)
     backports (3.3.3)
     builder (3.1.4)
     capistrano (2.15.5)
@@ -321,6 +324,7 @@ DEPENDENCIES
   active_model_serializers
   acts-as-taggable-on
   angularjs-rails
+  authority
   capistrano
   capybara
   coffee-rails (~> 4.0.0)
