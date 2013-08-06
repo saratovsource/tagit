@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 1.2'
 # State machine
 gem 'state_machine'
 
+gem 'virtus'
+
 ## Authentication (OmniAuth)
 gem 'omniauth', github: 'intridea/omniauth'
 #gem 'omniauth-twitter'
