@@ -84,6 +84,11 @@ group :test, :developent do
   gem "mocha", require: false
   gem 'response_code_matchers'
   gem 'rspec-rails-mocha', require: false
+  gem "teaspoon", path: '../teaspoon'
+
+  gem 'pry', require: 'pry'
+  gem 'pry-stack_explorer'
+  gem 'pry-debugger'
 end
 
 # Use ActiveModel has_secure_password
