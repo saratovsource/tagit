@@ -84,6 +84,7 @@ GEM
       rails (>= 3, < 5)
     addressable (2.3.5)
     angularjs-rails (1.0.7)
+    angularjs-rails-resource (0.2.2)
     arel (4.0.0)
     atomic (1.1.10)
     authority (2.7.0)
@@ -357,6 +358,7 @@ DEPENDENCIES
   active_model_serializers
   acts-as-taggable-on
   angularjs-rails
+  angularjs-rails-resource
   authority
   capistrano
   capybara

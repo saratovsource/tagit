@@ -60,6 +60,7 @@ gem 'github_api', github: 'peter-murach/github'
 
 # Angular
 gem 'angularjs-rails'
+gem 'angularjs-rails-resource'
 
 # Draper (presenter)
 gem 'draper', '~> 1.0'
