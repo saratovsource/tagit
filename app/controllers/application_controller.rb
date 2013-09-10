@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # Extend controller
   include Concerns::Authentication
+  include Concerns::AngularTemplating
   include Concerns::I18n
 
   protect_from_forgery with: :exception

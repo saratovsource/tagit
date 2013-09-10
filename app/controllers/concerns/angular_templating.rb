@@ -3,17 +3,20 @@ module Concerns
   module AngularTemplating
     extend ActiveSupport::Concern
     included do
+      respond_to :ng
       before_action :intercept_angular_templates
     end
 
     protected
 
     def intercept_angular_templates
-      if request.format == "text/angular"
+      if angular_request?
         render("#{params[:controller]}/#{params[:action]}", layout: false)
-      else
-        render nothing: true
       end
+    end
+
+    def angular_request?
+      request.format == "text/angular"
     end
   end
 end

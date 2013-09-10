@@ -21,6 +21,7 @@ class Api::V1::User::LinksController < Api::ApplicationController
 
   def update
     @item = repository.find(params[:id]).becomes(User::LinkType)
+    authorize_action_for @item
     @item.assign_attributes(params[:link])
     @item.save
     respond_with @item, location: api_v1_user_link_path(@item)
@@ -28,6 +29,7 @@ class Api::V1::User::LinksController < Api::ApplicationController
 
   def destroy
     @item = repository.find(params[:id])
+    authorize_action_for @item
     @item.destroy
     respond_with @item, location: api_v1_user_links_path
   end

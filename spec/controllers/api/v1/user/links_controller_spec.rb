@@ -23,7 +23,7 @@ describe Api::V1::User::LinksController do
 
   describe "PATCH 'update'" do
     it "returns http <status>" do
-      item = create :valid_link, {account_id: @provider.account.id}
+      item = create :valid_link, {account: @provider.account}
       attrs = item.attributes
       attrs[:uri] = "http://tagit.com/test"
       patch :update, link: attrs, id: item.id, format: :json
