@@ -1,10 +1,10 @@
 angular.module('tagit')
   .config [
-    '$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) ->
+    '$stateProvider', '$urlRouterProvider', 'tiRouterProvider', ($stateProvider, $urlRouterProvider, tiRouter) ->
       $stateProvider
         .state('links',
-          url: 'resources/links'
-          templateUrl: 'resources/links.ng'
-          controller: 'LinksController'
+          url: '/resources/links'
+          templateUrl: tiRouter.template('resources/links/index')
+          controller: 'ListLinksController'
         )
   ]

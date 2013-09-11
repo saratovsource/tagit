@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require js-routes
 //= require twitter/bootstrap
 //= require angular
 //= require angular-bootstrap
