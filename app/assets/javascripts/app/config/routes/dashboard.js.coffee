@@ -6,6 +6,6 @@ angular.module('tagit')
         .state('dashboard',
           url: '/'
           templateUrl: tiRouter.template('dashboard/index')
-          controller: 'DashboardController'
+          controller: 'IndexDashboardController'
         )
   ]
