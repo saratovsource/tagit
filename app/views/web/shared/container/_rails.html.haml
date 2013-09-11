@@ -1,0 +1,9 @@
+- if content_for? :sidebar
+  .span3= yield :sidebar
+  .span9
+    = bootstrap_flash
+    = yield
+- else
+  .span12
+    = bootstrap_flash
+    = yield

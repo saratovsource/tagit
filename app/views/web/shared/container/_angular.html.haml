@@ -1,0 +1,5 @@
+- if content_for? :sidebar
+  .span3= yield :sidebar
+  .span9(ui-view)
+- else
+  .span12(ui-view)

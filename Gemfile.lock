@@ -35,6 +35,12 @@ GIT
       oauth2
 
 GIT
+  remote: git://github.com/saratovsource/angular-ui-router-rails.git
+  revision: 151df2b85c72c9604b9346a02747b04257e4f6c7
+  specs:
+    angular-ui-router-rails (0.2.0)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 184e371a06ae881ff685b1320cfced00c5e5f9ae
   specs:
@@ -238,6 +244,8 @@ GEM
       cliver (~> 0.2.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
+    polyamorous (0.6.4)
+      activerecord (>= 3.0)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -267,6 +275,10 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.11.0)
     rake (10.1.0)
+    ransack (1.0.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      polyamorous (~> 0.6.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
@@ -352,6 +364,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   acts-as-taggable-on
+  angular-ui-router-rails!
   angularjs-rails
   angularjs-rails-resource
   authority
@@ -380,6 +393,7 @@ DEPENDENCIES
   pry-debugger
   pry-stack_explorer
   rails (= 4.0.0)
+  ransack
   response_code_matchers
   rspec
   rspec-rails

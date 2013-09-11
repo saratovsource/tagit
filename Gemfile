@@ -41,6 +41,9 @@ gem 'state_machine'
 gem 'virtus'
 gem 'active_model_serializers'
 
+# Search
+gem 'ransack'
+
 ## Authentication (OmniAuth)
 gem 'omniauth', github: 'intridea/omniauth'
 #gem 'omniauth-twitter'
@@ -61,6 +64,7 @@ gem 'github_api', github: 'peter-murach/github'
 # Angular
 gem 'angularjs-rails'
 gem 'angularjs-rails-resource'
+gem 'angular-ui-router-rails', github: 'saratovsource/angular-ui-router-rails'
 
 # Draper (presenter)
 gem 'draper', '~> 1.0'

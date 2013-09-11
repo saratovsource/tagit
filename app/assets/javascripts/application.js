@@ -16,6 +16,7 @@
 //= require angular
 //= require angular-bootstrap
 //= require angular-resource
+//= require angular-ui-router
 //= require angularjs/rails/resource
 //= require boot
 //= require app/app

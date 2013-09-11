@@ -1,4 +1,5 @@
 deps = [
+  'ui.router'
   'tagit.modules'
   'ngResource'
   'rails'
