@@ -1,6 +1,7 @@
 class Web::TemplatesController < Web::ApplicationController
   layout false
   def show
+    prepend_view_path "#{ Rails.root }/app/views/angular_templates"
     template_path = File.join('angular_templates', params[:id])
     render template_path
   end
