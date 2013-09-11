@@ -8,7 +8,7 @@ describe Web::TemplatesController do
 
   describe "GET 'show'" do
     it "returns http success" do
-      get 'show', id: 'dashboard/index'
+      get 'show', template: 'dashboard/index'
       expect(response).to be_success
     end
   end
