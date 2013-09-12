@@ -18,6 +18,8 @@ describe Api::V1::User::LinksController do
       attrs = attributes_for :valid_link
       post :create, link: attrs, format: :json
       expect(response).to be_success
+      link = controller.account.links.where(uri: attrs[:uri]).first
+      expect(link).to be_present
     end
   end
 

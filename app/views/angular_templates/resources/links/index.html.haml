@@ -1,3 +1,5 @@
 %h1 {{title}}
 %ul(ng-repeat="link in items")
   = render "resources/links/link"
+
+= link_to "new link", "#/resources/links/new"

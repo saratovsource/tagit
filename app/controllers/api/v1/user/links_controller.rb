@@ -8,10 +8,11 @@ class Api::V1::User::LinksController < Api::ApplicationController
   end
 
   def create
-    @item = repository.build.becomes(::User::LinkType)
-    @item.assign_attributes(params[:link])
+    @item = ::User::LinkType.new(params[:link])
+    @item.account = current_user
     @item.save
-    respond_with @item, location: api_v1_user_link_path(@item), serializer: ::User::LinkSerializer
+    puts Link.where(uri: @item.uri).first.inspect
+    respond_with @item, location: api_v1_user_links_path
   end
 
   def show
