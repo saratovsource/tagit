@@ -1,6 +1,7 @@
 deps = [
   'ui.router'
   'tagit.libs'
+  'tagit.directives'
   'tagit.controllers'
   'tagit.resources'
   'ngResource'

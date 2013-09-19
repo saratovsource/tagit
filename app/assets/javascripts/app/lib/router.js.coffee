@@ -3,3 +3,5 @@ angular.module('tagit.libs')
     template: (name) ->
       "#{Routes.templates_path()}/#{name}"
     $get: () ->
+      template: (name) ->
+        "#{Routes.templates_path()}/#{name}"
