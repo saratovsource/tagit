@@ -31,7 +31,7 @@ gem 'haml-rails'
 # Twitter bootstrap
 gem "therubyracer"
 gem "less-rails"
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

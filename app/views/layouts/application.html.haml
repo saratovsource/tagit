@@ -19,12 +19,10 @@
 
 
   %body
-    #wrap
+    .container
       = render "web/shared/navbar"
 
-      .container-fluid
-
-        .row-fluid
-          = render "web/shared/container/#{signined? ? 'angular' : 'rails'}"
-      %footer
-        %p &copy; Company 2013
+      .row
+        = render "web/shared/container/#{signined? ? 'angular' : 'rails'}"
+    %footer
+      %p &copy; Company 2013
