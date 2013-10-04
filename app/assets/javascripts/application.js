@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require js-routes
-//= require twitter/bootstrap
 //= require angular
 //= require angular-bootstrap
 //= require angular-resource
@@ -21,4 +21,5 @@
 //= require angularjs/rails/resource
 //= require boot
 //= require app/app
-//= require bootstrap
+
+$(document).foundation();

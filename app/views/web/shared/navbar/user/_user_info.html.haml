@@ -1,2 +1,5 @@
-= drop_down profile.user_name do
-  = menu_item "Log Out", session_path, method: :delete
+%ul.right
+  %li.has-dropdown
+    = link_to profile.user_name, '#'
+    %ul.dropdown
+      %li= link_to "Log Out", session_path, method: :delete

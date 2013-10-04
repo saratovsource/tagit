@@ -1,2 +1,5 @@
-= drop_down "Login" do
-  = menu_item "Github", auth_with_provider_url("github")
+%ul.right
+  %li.has-dropdown
+    = link_to "Login", '#'
+    %ul.dropdown
+      %li= link_to "Github", auth_with_provider_url("github")

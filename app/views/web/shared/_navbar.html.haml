@@ -1,3 +1,7 @@
-= nav_bar fixed: :top, brand: "TagIt" do
-  = menu_group pull: :right do
+%nav.top-bar
+  %ul.title-area
+    %li.name
+      %h1= link_to 'TagIt', root_path
+    %li.toggle-topbar= link_to '', '#'
+  %section.top-bar-section
     = render "web/shared/navbar/user"
